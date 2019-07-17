@@ -132,7 +132,7 @@ class MixinBase extends BusinessDay
             self::setRegionAndHolidays($carbonClass, $region, $holidays);
 
             if ($defaultOpeningHours) {
-                $mixin->openingHours = $carbonClass::convertOpeningHours($defaultOpeningHours);
+                $mixin->openingHours = $carbonClass::now()->convertOpeningHours($defaultOpeningHours);
             }
         }
 

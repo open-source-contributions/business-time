@@ -87,7 +87,7 @@ class DefinitionParser
     {
         [$region, $holidays, $openingHours] = $this->getSetterParameters();
         /* @var \Spatie\OpeningHours\OpeningHours $openingHours */
-        $openingHours = $carbonClass::convertOpeningHours($openingHours);
+        $openingHours = $carbonClass::now()->convertOpeningHours($openingHours);
 
         if ($region) {
             $openingHours->setData([
